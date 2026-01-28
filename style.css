@@ -1,11 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
-  --size: 1.5; 
+  --size: 1.5;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .terminal {
-  
   font-size: calc(var(--size) * 1em);
-  
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+
+@media (max-width: 1024px) {
+  :root {
+    --size: 1.2;
+  }
+}
+
+
+@media (max-width: 768px) {
+  :root {
+    --size: 1;
+  }
+}
+
+
+@media (max-width: 480px) {
+  :root {
+    --size: 0.85;
+  }
+}
+
+
+@media (max-width: 360px) {
+  :root {
+    --size: 0.7;
+  }
 }
 
 
