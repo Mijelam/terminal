@@ -5,7 +5,7 @@
 }
 
 :root {
-  --size: 1.5;
+  --size: clamp(0.7, 2vw, 1.5);
 }
 
 html, body {
@@ -39,7 +39,6 @@ body {
   overflow-y: auto;
 }
 
-
 .jquery-terminal-output {
   width: 100%;
   height: 100%;
@@ -51,30 +50,35 @@ body {
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 360px) {
+  :root {
+    --size: 0.7;
+  }
+}
+
+
+@media (min-width: 361px) and (max-width: 480px) {
+  :root {
+    --size: 0.85;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  :root {
+    --size: 1;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
   :root {
     --size: 1.2;
   }
 }
 
 
-@media (max-width: 768px) {
+@media (min-width: 1025px) {
   :root {
-    --size: 1;
-  }
-}
-
-
-@media (max-width: 480px) {
-  :root {
-    --size: 0.85;
-  }
-}
-
-
-@media (max-width: 360px) {
-  :root {
-    --size: 0.7;
+    --size: 1.5;
   }
 }
 
